@@ -1,5 +1,4 @@
 :root {
-
     /* Primary Colors */
     --color-very-dark-magenta: hsl(300, 43%, 22%);
     --color-soft-pink: hsl(333, 80%, 67%);
@@ -196,9 +195,8 @@ body {
 }
 
 /* FOOTER */
-/* TODO: style footer */
 .attribution {
-    display: none;
+    color: var(--color-dark-grayish-magenta);
     font-size: 11px; 
     text-align: center;
 }
@@ -220,8 +218,8 @@ body {
             "testimonials testimonials";
         grid-template-columns: 1fr 540px;
         grid-template-rows: 1fr 266px;
-        column-gap: 125px;
-        row-gap: 71px;
+        column-gap: 7.813rem;
+        row-gap: 4.438rem;
     }
 
     /* MAIN HEADER SECTION */
