@@ -50,7 +50,6 @@ body {
     pointer-events: none;
 }
 
-/* MAIN HEADER SECTION */
 .social-proof-component {
     max-width: 1110px;
     margin: 82px 24px;
@@ -61,6 +60,7 @@ body {
         "testimonials";
 }
 
+/* MAIN HEADER SECTION */
 .social-proof-component > header {
     max-width: 445px;
     grid-area: head;
@@ -89,7 +89,6 @@ body {
 /* REVIEWS SECTION */
 .reviews-section {
     grid-area: reviews;
-    max-width: 445px;
     margin-bottom: 3.063rem;
 }
 
@@ -106,6 +105,7 @@ body {
     background-color: var(--color-light-grayish-magenta);
     border-radius: 8px;
     padding: 0.938rem 0;
+    max-width: 445px;
 
     display: flex;
     flex-direction: column-reverse;
@@ -129,7 +129,6 @@ body {
 /* TESTIMONIALS SECTION */
 .testimonials-section {
     grid-area: testimonials;
-    max-width: 445px;
 }
 
 .testimonials-section > ul {
@@ -146,6 +145,7 @@ body {
     background-color: var(--color-very-dark-magenta);
     border-radius: 8px;
     padding: 2.5rem 2rem 1.938rem;
+    max-width: 445px;
 }
 
 .testimonial-card > header {
@@ -205,4 +205,84 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1110px) {
+    body {
+        background: 
+            no-repeat top left url("./images/bg-pattern-top-desktop.svg"), 
+            no-repeat bottom right url("./images/bg-pattern-bottom-desktop.svg");
+    }
+
+    .social-proof-component {
+        grid-template-areas: 
+            "head reviews"
+            "testimonials testimonials";
+        grid-template-columns: 1fr 540px;
+        grid-template-rows: 1fr 266px;
+        column-gap: 125px;
+        row-gap: 71px;
+    }
+
+    /* MAIN HEADER SECTION */
+    .social-proof-component > header {
+        margin-bottom: 0;
+    }
+
+    .head-title {
+        font-size: 3.5rem;
+        line-height: 0.857em;
+        text-align: left;
+        margin-bottom: 1.625rem;
+    }
+    
+    .head-text {
+        text-align: left;
+    }
+
+    /* REVIEWS SECTION */
+    .reviews-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 1.125rem;
+    }
+
+    .reviews-section > ul li:nth-child(2) {
+        align-self: center;
+    }
+
+    .reviews-section > ul li:nth-child(3) {
+        align-self: flex-end;
+    }
+
+    .review-card {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        column-gap: 2rem;
+        padding: 1.25rem 2rem;
+        width: 445px;
+    }
+
+    /* TESTIMONIALS SECTION */
+    .testimonials-section {
+        display: flex;
+    }
+
+    .testimonials-section > ul {
+        flex-direction: row;
+        column-gap: 1.875rem;
+    }
+
+    .testimonials-section > ul li:nth-child(2) {
+        align-self: center;
+    }
+
+    .testimonials-section > ul li:nth-child(3) {
+        align-self: flex-end;
+    }
+
+    .testimonial-card {
+        padding-bottom: 2.5rem;
+    }
 }
